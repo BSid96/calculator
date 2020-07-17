@@ -1,91 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:calculator/buttons.dart';
 
 class Keypad extends StatelessWidget {
+  final button = Buttons();
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 20.0),
       color: Color(0xFF202125),
-      child: GridView.count(
-        crossAxisCount: 3,
-        physics: NeverScrollableScrollPhysics(),
+      child: Column(
         children: <Widget>[
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                button.botton(text: "7"),
+                button.botton(text: "8"),
+                button.botton(text: "9"),
+              ],
+            ),
           ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                button.botton(text: "4"),
+                button.botton(text: "5"),
+                button.botton(text: "6"),
+              ],
+            ),
           ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                button.botton(text: "1"),
+                button.botton(text: "2"),
+                button.botton(text: "3"),
+              ],
+            ),
           ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
-          ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
-          ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
-          ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
-          ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
-          ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
-          ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
-          ),
-          Container(
-            child: Center(
-                child: Text(
-              '1',
-              style: TextStyle(fontSize: 50.0),
-            )),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                button.botton(text: "0"),
+                button.botton(text: "."),
+                Expanded(child: SizedBox()),
+              ],
+            ),
           ),
         ],
       ),

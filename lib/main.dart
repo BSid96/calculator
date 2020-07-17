@@ -15,52 +15,47 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-        statusBarColor: Color(0xFF2D3033),
-      ),
-    );
-    SystemChrome.setEnabledSystemUIOverlays([]);
+        SystemUiOverlayStyle(statusBarColor: Color(0xFF2D3033)));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
+        accentColor: Color(0xFF2C3033),
+        fontFamily: "Product_Sans",
       ),
       home: Scaffold(
-        body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Expanded(
-                child: Screen(),
-                flex: 34,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              child: Screen(),
+              flex: 50,
+            ),
+            Expanded(
+              child: ExtraFunctions(),
+              flex: 35,
+            ),
+            Expanded(
+              flex: 65,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Expanded(
+                    child: Keypad(),
+                    flex: 65,
+                  ),
+                  VerticalDivider(
+                    thickness: 1.0,
+                    width: 1.0,
+                  ),
+                  Expanded(
+                    child: BasicFunctions(),
+                    flex: 35,
+                  ),
+                ],
               ),
-              Expanded(
-                child: ExtraFunctions(),
-                flex: 23,
-              ),
-              Expanded(
-                flex: 43,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    Expanded(
-                      child: Keypad(),
-                      flex: 65,
-                    ),
-                    VerticalDivider(
-                      thickness: 1.0,
-                      width: 1.0,
-                    ),
-                    Expanded(
-                      child: BasicFunctions(),
-                      flex: 35,
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
