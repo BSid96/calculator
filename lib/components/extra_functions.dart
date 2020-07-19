@@ -2,7 +2,6 @@ import 'package:calculator/buttons.dart';
 import 'package:flutter/material.dart';
 
 class ExtraFunctions extends StatelessWidget {
-  final button = Buttons();
   final size = 27.0;
   @override
   Widget build(BuildContext context) {
@@ -14,33 +13,33 @@ class ExtraFunctions extends StatelessWidget {
           Expanded(
             child: Row(
               children: <Widget>[
-                button.botton(text: 'INV', size: size),
-                button.botton(text: 'RAD', size: size),
-                button.botton(text: 'sin', size: size),
-                button.botton(text: "cos", size: size),
-                button.botton(text: 'tan', size: size),
+                Button(text: 'INV', size: size),
+                Button(text: 'RAD', size: size),
+                Button(text: 'sin', size: size),
+                Button(text: "cos", size: size),
+                Button(text: 'tan', size: size),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: <Widget>[
-                button.botton(text: '%', size: size),
-                button.botton(text: 'ln', size: size),
-                button.botton(text: 'log', size: size),
-                button.botton(text: '√', size: size),
-                button.botton(text: '^', size: size),
+                Button(text: '%', size: size),
+                Button(text: 'ln', size: size),
+                Button(text: 'log', size: size),
+                Button(text: '√', size: size),
+                Button(text: '^', size: size),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: <Widget>[
-                button.botton(text: 'π', size: size),
-                button.botton(text: 'e', size: size),
-                button.botton(text: '(', size: size),
-                button.botton(text: ')', size: size),
-                button.botton(text: '!', size: size),
+                Button(text: 'π', size: size),
+                Button(text: 'e', size: size),
+                Button(text: '(', size: size),
+                Button(text: ')', size: size),
+                Button(text: '!', size: size),
               ],
             ),
           ),

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:calculator/buttons.dart';
 
 class Keypad extends StatelessWidget {
-  final button = Buttons();
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,9 +12,9 @@ class Keypad extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                button.botton(text: "7"),
-                button.botton(text: "8"),
-                button.botton(text: "9"),
+                Button(text: "7"),
+                Button(text: "8"),
+                Button(text: "9"),
               ],
             ),
           ),
@@ -24,9 +22,9 @@ class Keypad extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                button.botton(text: "4"),
-                button.botton(text: "5"),
-                button.botton(text: "6"),
+                Button(text: "4"),
+                Button(text: "5"),
+                Button(text: "6"),
               ],
             ),
           ),
@@ -34,9 +32,9 @@ class Keypad extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                button.botton(text: "1"),
-                button.botton(text: "2"),
-                button.botton(text: "3"),
+                Button(text: "1"),
+                Button(text: "2"),
+                Button(text: "3"),
               ],
             ),
           ),
@@ -44,8 +42,8 @@ class Keypad extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                button.botton(text: "0"),
-                button.botton(text: "."),
+                Button(text: "0"),
+                Button(text: "."),
                 Expanded(child: SizedBox()),
               ],
             ),
